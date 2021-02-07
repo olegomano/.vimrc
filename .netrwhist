@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/oleg/Documents/dev/engine-2/.git/branches'
+let g:netrw_dirhist_6='/home/oleg/Documents/dev/engine-2/.git'
+let g:netrw_dirhist_5='/home/oleg/Documents/dev/engine-2'
+let g:netrw_dirhist_4='/home/oleg/Documents/dev/engine-2/render/src/software_impl'
+let g:netrw_dirhist_3='/home/oleg/Documents/dev/engine-2/render/src'
+let g:netrw_dirhist_2='/home/oleg/Documents/dev/engine-2/render'
+let g:netrw_dirhist_1='/home/oleg/Documents/dev/engine-2'
