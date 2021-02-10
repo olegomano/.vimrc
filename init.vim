@@ -9,8 +9,6 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 Plug 'tomasr/molokai'
 " Properly navigate splits when in tmux
 Plug 'christoomey/vim-tmux-navigator'  
-" Color schemes
-Plug 'cocopon/iceberg.vim'
 " status bar
 Plug 'itchyny/lightline.vim'
 " Language stuff
@@ -21,7 +19,7 @@ Plug 'HerringtonDarkholme/yats.vim'
 Plug 'rhysd/vim-clang-format'
 " Language server
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'jackguo380/vim-lsp-cxx-highlight'
+Plug 'rust-lang/rust.vim'
 " Debugging
 Plug 'chmanie/termdebugx.nvim'
 " File exploring
@@ -44,7 +42,15 @@ Plug 'ferrine/md-img-paste.vim'
 Plug 'chrisbra/Colorizer'
 Plug 'scrooloose/nerdtree'
 call plug#end()
-nnoremap <silent> <C-k><C-B> :NERDTreeToggle<CR>
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'octol/vim-cpp-enhanced-highlight'
+call vundle#end()
+
+nnoremap <C-b> :NERDTreeToggle<CR>
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
 " Turn on syntax highlighting
 syntax on
 
@@ -297,7 +303,7 @@ let g:lightline = {
   \   'left': [ [ 'mode', 'paste' ],
   \             [ 'readonly',  'cocstatus', 'filename', 'modified' ] ]
   \ },
-  \ 'colorscheme': 'iceberg',
+  \ 'colorscheme': 'molokai',
   \ 'component_function': {
   \   'cocstatus': 'coc#status'
   \ },
